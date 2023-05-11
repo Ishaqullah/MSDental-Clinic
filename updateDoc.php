@@ -172,11 +172,17 @@
                         $contact = $_POST['contact'];
                         $hours = $_POST['hours'];
                         $updateId = "update doctor set Name='$name', Email='$email', Phone='$contact', Address='$address' , Speciality='$speciality', Hours='$hours' where D_Id='$id' ";
+
                         if ($conn->query($updateId) === TRUE) {
-                            echo "<label class='form-label' id='error-update' for='form3Example1c'>Record Updated Successfully</label>";
-                        } else if ($conn->query($updateId) === FALSE) {
+                            if (mysqli_affected_rows($conn) > 0) {
+                                echo "<label class='form-label' id='error-update' for='form3Example1c'>Record Updated Successfully</label>";
+                            } else {
+                                echo "<label class='form-label' id='error-update' for='form3Example1c'>Error updating record: ID '$id' not found in table.</label>";
+                            }
+                        } else {
                             echo "Error updating record: " . $conn->error;
                         }
+
 
 
 

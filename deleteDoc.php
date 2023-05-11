@@ -104,7 +104,7 @@
                                     if (mysqli_affected_rows($conn) > 0) {
                                         echo "<label class='form-label' id='error-delete' for='form3Example1c'>Record Deleted Successfully</label>";
                                     } else {
-                                        echo "Error deleting record: ID '$id' not found in table.";
+                                        echo "<label class='form-label' id='error-delete' for='form3Example1c'>Error deleting record: ID '$id' not found in table.</label>";
                                     }
                                 } else {
                                     echo "Error deleting record: " . $conn->error;
