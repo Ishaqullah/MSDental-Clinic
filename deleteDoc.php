@@ -102,7 +102,7 @@
                                 $deleteId = "DELETE FROM doctor WHERE D_Id='$id'";
                                 if ($conn->query($deleteId) === TRUE) {
                                     if (mysqli_affected_rows($conn) > 0) {
-                                        echo "<label class='form-label' for='form3Example1c'>Record Deleted Successfully</label>";
+                                        echo "<label class='form-label' id='error-delete' for='form3Example1c'>Record Deleted Successfully</label>";
                                     } else {
                                         echo "Error deleting record: ID '$id' not found in table.";
                                     }

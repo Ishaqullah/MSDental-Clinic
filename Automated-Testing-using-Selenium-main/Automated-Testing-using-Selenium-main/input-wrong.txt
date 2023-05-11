@@ -1,1 +1,0 @@
-"This is an alpha string which cannot be sorted numerically"
