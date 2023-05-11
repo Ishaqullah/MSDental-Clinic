@@ -47,6 +47,7 @@ try:
 
     submitBtn=driver.find_element(By.ID,"update-record")
     submitBtn.send_keys('\n')
+    wait()
     labelText = driver.find_element(By.ID,'error-update').get_attribute('innerHTML')
     if 'Error' in labelText: 
         check=False

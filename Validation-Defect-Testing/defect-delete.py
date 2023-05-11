@@ -26,7 +26,7 @@ try:
     
     submitBtn=driver.find_element(By.ID,"delete-record")
     submitBtn.send_keys('\n')
-    
+    wait()
     labelText = driver.find_element(By.ID,'error-delete').get_attribute('innerHTML')
     if 'Error' in labelText: 
         check=False
