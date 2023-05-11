@@ -6,7 +6,6 @@ driver = webdriver.Chrome()
 
 def wait():
 	time.sleep(2)
-# get the url
 driver.get("http://localhost:8080/DBMSI/admin.php")
 check=True
 driver.maximize_window()
@@ -20,8 +19,8 @@ try:
     submitBtn=driver.find_element(By.ID,"login")
     submitBtn.send_keys('\n')
     wait()
-    alertText = driver.switch_to.alert.text
-    if 'Invalid' in alertText: 
+    labelText = driver.find_element(By.ID,'error-update').get_attribute('innerHTML')
+    if 'Error' in labelText: 
         check=False
         raise Exception("Error")
 except Exception:
