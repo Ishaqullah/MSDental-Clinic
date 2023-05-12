@@ -33,7 +33,7 @@ try:
     wait()
 
     specialityInputField= driver.find_element(By.ID,"form3Example4c")
-    specialityInputField.send_keys('double')
+    specialityInputField.send_keys('double Bachod')
     wait()
     
 
@@ -53,7 +53,7 @@ try:
         check=False
         raise Exception("Error")
 except Exception:
-      print('Validation Test Failed ❌')
+      print('Defect Test Failed ❌')
 if check:
     print('Test Passed Successfully ✅')
     
