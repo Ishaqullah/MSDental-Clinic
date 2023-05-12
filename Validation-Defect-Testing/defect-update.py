@@ -33,7 +33,7 @@ try:
     wait()
 
     specialityInputField= driver.find_element(By.ID,"form3Example4c")
-    specialityInputField.send_keys('double Bachod')
+    specialityInputField.send_keys('root canal specialist')
     wait()
     
 
