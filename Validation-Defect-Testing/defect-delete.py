@@ -32,7 +32,7 @@ try:
         check=False
         raise Exception("Error")
 except Exception:
-      print('Validation Test Failed ❌')
+      print('Defect Test Failed ❌')
 if check:
     print('Test Passed Successfully ✅')
     
